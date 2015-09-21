@@ -1,0 +1,11 @@
+﻿html{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.classbody {
+    background-image: url('Images/background.jpg');
+}
+
+.level1 nav > li{
+    padding-left:15px;
+}

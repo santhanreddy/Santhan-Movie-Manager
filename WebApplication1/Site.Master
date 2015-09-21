@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Santhan Movie Manager</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">SANTHAN MOVIE MANAGER</a>
+        </div>
+        <div class="navbar">
+                <div class="container">
+                    <asp:Menu CssClass="navbar" StaticMenuStyle-CssClass="nav" StaticSelectedStyle-CssClass="active" DynamicMenuStyle-CssClass="dropdown-menu" runat="server" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="HOME" ></asp:MenuItem>
+                            <asp:MenuItem Text="MOVIES">
+                                <asp:MenuItem Text="CREATE" NavigateUrl="~/CreateMovies.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="UPDATE" NavigateUrl="~/UpdateMovies.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="DELETE" NavigateUrl="~/DeleteMovies.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="CONTACT US"></asp:MenuItem>
+                        </Items>
+
+                    </asp:Menu>
+                    <%--                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">About Us</a></li>
+                    <li role="presentation"><a href="#">Create Movies</a><a>Edit Movies</a>  </li>
+                    <li role="presentation"><a href="#">Contact Us</a></li>
+                </ul>--%>
+                </div>
+            </div>
+        <div class="classbody">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div>
+            <footer>
+                &copy 2015 BY SANTHAN REDDY.
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
